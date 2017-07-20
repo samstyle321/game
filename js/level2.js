@@ -11,8 +11,8 @@
     var paddleX = (canvas.width-paddleWidth)/2;
     var rightPressed = false;
     var leftPressed = false;
-    var brickRowCount = 5;
-    var brickColumnCount = 3;
+    var brickRowCount = 10;
+    var brickColumnCount = 6;
     var brickWidth = 75;
     var brickHeight = 20;
     var brickPadding = 10;
@@ -62,7 +62,7 @@
                         b.status = 0;
                         score++;
                         if(score == brickRowCount*brickColumnCount) {
-                            alert("YOU WIN, CONGRATS!" );
+                            alert("YOU WIN, CONGRATS!");
                             document.location.reload();
                         }
                     }
@@ -73,7 +73,7 @@
     function drawBall() {
         ctx.beginPath();
         ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-        ctx.fillStyle = "#000";
+        ctx.fillStyle = "#fff";
         ctx.fill();
         ctx.closePath();
     }
@@ -94,7 +94,7 @@
                     bricks[c][r].y = brickY;
                     ctx.beginPath();
                     ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                    ctx.fillStyle = "blue";
+                    ctx.fillStyle = "#f00";
                     ctx.fill();
                     ctx.closePath();
                 }
@@ -150,6 +150,8 @@
         else if(leftPressed && paddleX > 0) {
             paddleX -= 7;
         }
+        x += dx;
+        y += dy;
         x += dx;
         y += dy;
         requestAnimationFrame(draw);

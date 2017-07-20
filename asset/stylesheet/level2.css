@@ -3,19 +3,29 @@
    margin: 0;
     } 
   canvas {
-   background: #fea;
+   background: #000;
     display: block;
      margin: 0 auto; 
  }
- div{
- 	text-align: center;
+ 
+
+ 
+  .dprev{
+ 	display: inline-block;
  	padding-top: 40px;
  	
 
  }
  a{
+ 	display: inline-block;
  	text-decoration: none;
  	color: "green";
  	font-size: 40px;
 
  }
+.dnext{
+	display: inline-block;
+	text-align: right;
+	padding-left: 50%;
+
+}
